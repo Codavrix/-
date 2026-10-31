@@ -170,7 +170,9 @@ restartBtn.addEventListener('click', () => {
 /* ============================================================
    ЛОГИКА САЙТА (ШАГИ)
    ============================================================ */
-const SUB_URL = "https://raw.githubusercontent.com/ffffffis/Codavrix-forum-first-sub-/refs/heads/main/Sub";
+// НОВАЯ ССЫЛКА НА ПОДПИСКУ
+const SUB_URL = "https://clck.ru/3Wnqdy"; 
+
 let currentApp = '';
 
 const apps = {
