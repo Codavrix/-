@@ -1,43 +1,61 @@
 /* ============================================================
-   ЛОГИКА КАПЧИ
+   ИКОНКИ (Обновленные, ровные и премиальные)
    ============================================================ */
 const ICONS = {
+    // Щит (Защита)
     shield: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2.5 4.5 5.5v6c0 5 3.5 8.5 7.5 10 4-1.5 7.5-5 7.5-10v-6L12 2.5Z" fill="#1db954" opacity="0.2"/>
-        <path d="M12 2.5 4.5 5.5v6c0 5 3.5 8.5 7.5 10 4-1.5 7.5-5 7.5-10v-6L12 2.5Z" stroke="#1db954" stroke-width="1.8" stroke-linejoin="round"/>
-        <path d="M8.5 12l2.5 2.5 4.5-4.5" stroke="#bfff00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 3L4 6V11C4 16.5 7.5 20.5 12 22C16.5 20.5 20 16.5 20 11V6L12 3Z" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9 12L11 14L15.5 9.5" stroke="#bfff00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>`,
+    
+    // Молния (Скорость)
     lightning: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M13.5 2 5 13.5h6L9.8 22 19 10.2h-6L13.5 2Z" fill="#bfff00"/>
-        <path d="M13.5 2 5 13.5h6" stroke="#bfff00" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M13 2L4.5 13.5H11V22L20.5 10.5H14L13 2Z" stroke="#bfff00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>`,
+    
+    // Глобус (Сеть)
     globe: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="12" cy="12" r="9" stroke="#1db954" stroke-width="1.8"/>
-        <path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" stroke="#1db954" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="12" cy="12" r="9" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3 12H21" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 3C14.5 5.5 14.5 18.5 12 21" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 3C9.5 5.5 9.5 18.5 12 21" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>`,
+    
+    // Замок (Приватность)
     lock: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="5" y="10" width="14" height="11" rx="2" fill="#1db954" opacity="0.2" stroke="#1db954" stroke-width="1.8"/>
-        <path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="#1db954" stroke-width="1.8" stroke-linecap="round"/>
-        <circle cx="12" cy="15" r="1.5" fill="#bfff00"/>
+        <rect x="4" y="10" width="16" height="11" rx="2" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8 10V7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7V10" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="12" cy="15.5" r="2" fill="#bfff00"/>
     </svg>`,
+    
+    // Ключ (Доступ)
     key: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="7" cy="12" r="4" stroke="#1db954" stroke-width="1.8"/>
-        <path d="M11 12h10M17 12v3M20 12v2" stroke="#1db954" stroke-width="1.8" stroke-linecap="round"/>
+        <circle cx="7.5" cy="15.5" r="4.5" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10.5 12.5L20 3" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16 7L19 10" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M19 4L22 7" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>`,
-    rocket: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2c3 1.5 5 4.5 5 8 0 3.5-2 6.5-5 8-3-1.5-5-4.5-5-8 0-3.5 2-6.5 5-8Z" fill="#1db954" opacity="0.2" stroke="#1db954" stroke-width="1.8"/>
-        <circle cx="12" cy="9" r="2" fill="#bfff00"/>
-        <path d="M7 18l-2 4 4-2M17 18l2 4-4-2" stroke="#1db954" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>`,
+    
+    // Wi-Fi (Соединение)
     wifi: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 8.5C7.5 4 16.5 4 22 8.5" stroke="#1db954" stroke-width="1.8" stroke-linecap="round"/>
-        <path d="M5 12c4-3 10-3 14 0" stroke="#1db954" stroke-width="1.8" stroke-linecap="round"/>
-        <path d="M8 15.5c2.5-2 5.5-2 8 0" stroke="#bfff00" stroke-width="1.8" stroke-linecap="round"/>
-        <circle cx="12" cy="19" r="1.5" fill="#bfff00"/>
+        <path d="M2 8.5C7.5 3.5 16.5 3.5 22 8.5" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M5 12C9 8.5 15 8.5 19 12" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8.5 15.5C10.5 13.5 13.5 13.5 15.5 15.5" stroke="#bfff00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="12" cy="19.5" r="1.5" fill="#bfff00"/>
     </svg>`,
+    
+    // Глаз (Наблюдение/Анонимность)
     eye: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z" stroke="#1db954" stroke-width="1.8"/>
+        <path d="M2 12C2 12 6 5 12 5C18 5 22 12 22 12C22 12 18 19 12 19C6 19 2 12 2 12Z" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <circle cx="12" cy="12" r="3" fill="#bfff00"/>
+    </svg>`,
+    
+    // Ракета (Скорость/Запуск)
+    rocket: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C12 2 16 5 16 10C16 13 15 15 15 15H9C9 15 8 13 8 10C8 5 12 2 12 2Z" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9 15L7 19L10 18" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15 15L17 19L14 18" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="12" cy="9" r="1.5" fill="#bfff00"/>
     </svg>`
 };
 
@@ -48,6 +66,9 @@ const NAMES = {
 
 const KEYS = Object.keys(ICONS);
 
+/* ============================================================
+   ЛОГИКА КАПЧИ
+   ============================================================ */
 const grid = document.getElementById('grid');
 const targetName = document.getElementById('targetName');
 const overlay = document.getElementById('overlay');
