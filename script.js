@@ -1,5 +1,5 @@
 /* ============================================================
-   ТВОИ ИКОНКИ (Solid) с идеальной геометрией
+   ИКОНКИ (Solid) без ракеты
    ============================================================ */
 const ICONS = {
     shield: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#1db954"><path d="M12 2L4 5v6c0 5.55 3.84 10.74 8 11 4.16-.26 8-5.45 8-11V5l-8-3zm-1.4 14.5L7 12.9l1.4-1.4 2.2 2.2 4.6-4.6 1.4 1.4-5.9 6z"/></svg>`,
@@ -8,14 +8,12 @@ const ICONS = {
     lock: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#1db954"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>`,
     key: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#1db954"><path d="M12.65 10C11.83 7.67 9.61 6 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6c2.61 0 4.83-1.67 5.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>`,
     wifi: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#1db954"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z" fill="#bfff00"/></svg>`,
-    eye: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#1db954"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>`,
-    // Классическая ракета из Material Icons
-    rocket: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#1db954"><path d="M12 2.5s-4 4.5-4 9c0 2.5 1.5 4.5 3 5.5v3.5c0 .55.45 1 1 1h0c.55 0 1-.45 1-1v-3.5c1.5-1 3-3 3-5.5 0-4.5-4-9-4-9z"/><circle cx="12" cy="9" r="2" fill="#bfff00"/><path d="M7 18.5L5.5 21c-.5.5-1 .5-1.5 0s-.5-1 0-1.5l2.5-2.5M17 18.5l1.5 2.5c.5.5 1 .5 1.5 0s.5-1 0-1.5l-2.5-2.5" stroke="#1db954" stroke-width="2" stroke-linecap="round"/></svg>`
+    eye: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#1db954"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>`
 };
 
 const NAMES = {
     shield: 'Щит', lightning: 'Молнию', globe: 'Глобус', lock: 'Замок',
-    key: 'Ключ', rocket: 'Ракету', wifi: 'Wi-Fi', eye: 'Глаз'
+    key: 'Ключ', wifi: 'Wi-Fi', eye: 'Глаз'
 };
 
 const KEYS = Object.keys(ICONS);
@@ -142,7 +140,7 @@ restartBtn.addEventListener('click', () => {
 
 
 /* ============================================================
-   ЛОГИКА САЙТА (ШАГИ)
+   ЛОГИКА САЙТА (ШАГИ) - БЕЗ NEKOBOX
    ============================================================ */
 const SUB_URL = "https://clck.ru/3Wnqdy"; 
 let currentApp = '';
@@ -163,7 +161,6 @@ const apps = {
         download: 'v2rayng.apk', 
         import: `v2rayng://install-config?url=${SUB_URL}`
     },
-    // NekoBox удален
     v2raytun: {
         name: 'V2rayTun',
         download: 'https://play.google.com/store/apps/details?id=com.v2raytun.android',
