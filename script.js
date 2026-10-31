@@ -1,5 +1,5 @@
 /* ============================================================
-   ЗАЛИТЫЕ ИКОНКИ (Solid) с идеальной геометрией
+   ЗАЛИТЫЕ ИКОНКИ (Solid) для капчи
    ============================================================ */
 const ICONS = {
     shield: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#1db954"><path d="M12 2L4 5v6c0 5.55 3.84 10.74 8 11 4.16-.26 8-5.45 8-11V5l-8-3zm-1.4 14.5L7 12.9l1.4-1.4 2.2 2.2 4.6-4.6 1.4 1.4-5.9 6z"/></svg>`,
@@ -144,7 +144,6 @@ restartBtn.addEventListener('click', () => {
    ЛОГИКА САЙТА (ШАГИ)
    ============================================================ */
 const SUB_URL = "https://clck.ru/3Wnqdy"; 
-
 let currentApp = '';
 
 const apps = {
@@ -157,6 +156,28 @@ const apps = {
         name: 'Incy',
         download: 'https://play.google.com/store/apps/details?id=llc.itdev.incy',
         import: `incy://add/${SUB_URL}`
+    },
+    v2rayng: {
+        name: 'V2rayNG',
+        // Если у тебя есть прямая ссылка на APK, вставь её вместо этой (или оставь заглушку)
+        download: 'https://github.com/2dust/v2rayNG/releases', 
+        import: `v2rayng://install-config?url=${encodeURIComponent(SUB_URL)}#Omnivex`
+    },
+    nekobox: {
+        name: 'NekoBox',
+        // Если у тебя есть прямая ссылка на APK, вставь её вместо этой
+        download: 'https://github.com/MatsuriDayo/NekoBoxForAndroid/releases',
+        import: `NekoBox://install-config?url=${encodeURIComponent(SUB_URL)}`
+    },
+    v2raytun: {
+        name: 'V2rayTun',
+        download: 'https://play.google.com/store/apps/details?id=com.v2raytun.android',
+        import: `v2raytun://import/${SUB_URL}`
+    },
+    hiddify: {
+        name: 'Hiddify',
+        download: 'https://play.google.com/store/apps/details?id=app.hiddify.com',
+        import: `hiddify://import/${SUB_URL}#Omnivex`
     }
 };
 
@@ -177,6 +198,8 @@ function goToStep(step, app = null) {
         const data = apps[currentApp];
         document.getElementById('step-3-app-name').textContent = data.name;
         document.getElementById('import-link').href = data.import;
+        // Обновляем текст кнопки под конкретное приложение
+        document.getElementById('import-link').textContent = `Импортировать в ${data.name}`;
     }
     
     window.scrollTo({ top: 0, behavior: 'smooth' });
