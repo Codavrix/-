@@ -36,7 +36,7 @@ body { font-family: 'Manrope', sans-serif; background-color: var(--bg); color: v
 .card { aspect-ratio: 1 / 1; border-radius: 14px; background: rgba(255, 255, 255, 0.03); border: 1.5px solid var(--border); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: border-color 0.15s, background 0.15s, transform 0.15s; overflow: hidden; user-select: none; }
 .card:hover { background: rgba(29, 185, 84, 0.08); border-color: rgba(29, 185, 84, 0.4); transform: translateY(-2px); }
 .card:active { transform: scale(0.96); }
-.card svg { width: 85%; height: 85%; display: block; pointer-events: none; transition: transform 0.15s; }
+.card svg { width: 60%; height: 60%; display: block; pointer-events: none; transition: transform 0.15s; }
 .card:hover svg { transform: scale(1.1); }
 .card.wrong { background: rgba(209, 84, 104, 0.1); border-color: #d15468; animation: shake 0.4s; }
 .card.wrong svg { opacity: 0.3; }
