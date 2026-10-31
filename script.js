@@ -144,6 +144,7 @@ restartBtn.addEventListener('click', () => {
    ЛОГИКА САЙТА (ШАГИ)
    ============================================================ */
 const SUB_URL = "https://clck.ru/3Wnqdy"; 
+
 let currentApp = '';
 
 const apps = {
@@ -159,15 +160,13 @@ const apps = {
     },
     v2rayng: {
         name: 'V2rayNG',
-        // Если у тебя есть прямая ссылка на APK, вставь её вместо этой (или оставь заглушку)
         download: 'https://github.com/2dust/v2rayNG/releases', 
-        import: `v2rayng://install-config?url=${encodeURIComponent(SUB_URL)}#Omnivex`
+        import: `v2rayng://install-config?url=${SUB_URL}`
     },
     nekobox: {
         name: 'NekoBox',
-        // Если у тебя есть прямая ссылка на APK, вставь её вместо этой
         download: 'https://github.com/MatsuriDayo/NekoBoxForAndroid/releases',
-        import: `NekoBox://install-config?url=${encodeURIComponent(SUB_URL)}`
+        import: `NekoBox://install-config?url=${SUB_URL}`
     },
     v2raytun: {
         name: 'V2rayTun',
@@ -177,7 +176,7 @@ const apps = {
     hiddify: {
         name: 'Hiddify',
         download: 'https://play.google.com/store/apps/details?id=app.hiddify.com',
-        import: `hiddify://import/${SUB_URL}#Omnivex`
+        import: `hiddify://import/${SUB_URL}`
     }
 };
 
@@ -198,7 +197,6 @@ function goToStep(step, app = null) {
         const data = apps[currentApp];
         document.getElementById('step-3-app-name').textContent = data.name;
         document.getElementById('import-link').href = data.import;
-        // Обновляем текст кнопки под конкретное приложение
         document.getElementById('import-link').textContent = `Импортировать в ${data.name}`;
     }
     
