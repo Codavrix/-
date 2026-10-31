@@ -1,62 +1,31 @@
 /* ============================================================
-   ИКОНКИ (Обновленные, ровные и премиальные)
+   ИКОНКИ TABLER (готовые, ровные, 24x24, stroke 2px)
+   Цвета изменены на фирменные Omnivex
    ============================================================ */
 const ICONS = {
-    // Щит (Защита)
-    shield: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 3L4 6V11C4 16.5 7.5 20.5 12 22C16.5 20.5 20 16.5 20 11V6L12 3Z" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M9 12L11 14L15.5 9.5" stroke="#bfff00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>`,
+    // Щит (shield)
+    shield: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a12 12 0 0 0 8.5 3a12 12 0 0 1 -8.5 15a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3" /><path d="M9 12l2 2l4 -4" stroke="#bfff00"/></svg>`,
     
-    // Молния (Скорость)
-    lightning: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M13 2L4.5 13.5H11V22L20.5 10.5H14L13 2Z" stroke="#bfff00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>`,
+    // Молния (bolt)
+    lightning: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#bfff00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11" /></svg>`,
     
-    // Глобус (Сеть)
-    globe: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="12" cy="12" r="9" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M3 12H21" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M12 3C14.5 5.5 14.5 18.5 12 21" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M12 3C9.5 5.5 9.5 18.5 12 21" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>`,
+    // Глобус (world)
+    globe: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" /><path d="M3.6 9h16.8" /><path d="M3.6 15h16.8" /><path d="M11.5 3a17 17 0 0 0 0 18" /><path d="M12.5 3a17 17 0 0 1 0 18" /></svg>`,
     
-    // Замок (Приватность)
-    lock: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="4" y="10" width="16" height="11" rx="2" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M8 10V7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7V10" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="12" cy="15.5" r="2" fill="#bfff00"/>
-    </svg>`,
+    // Замок (lock)
+    lock: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2" /><circle cx="12" cy="16" r="1" fill="#bfff00" /><path d="M8 11v-4a4 4 0 0 1 8 0v4" /></svg>`,
     
-    // Ключ (Доступ)
-    key: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="7.5" cy="15.5" r="4.5" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M10.5 12.5L20 3" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M16 7L19 10" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M19 4L22 7" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>`,
+    // Ключ (key)
+    key: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4" /><path d="M10.85 12.15l7.15 -7.15" /><path d="M18 5l2 2" /><path d="M15 8l2 2" /></svg>`,
     
-    // Wi-Fi (Соединение)
-    wifi: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 8.5C7.5 3.5 16.5 3.5 22 8.5" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M5 12C9 8.5 15 8.5 19 12" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M8.5 15.5C10.5 13.5 13.5 13.5 15.5 15.5" stroke="#bfff00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="12" cy="19.5" r="1.5" fill="#bfff00"/>
-    </svg>`,
+    // Wi-Fi
+    wifi: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18l.01 0" stroke="#bfff00" /><path d="M9.172 15.172a4 4 0 0 1 5.656 0" stroke="#bfff00" /><path d="M6.343 12.343a8 8 0 0 1 11.314 0" /><path d="M3.515 9.515c4.686 -4.687 12.284 -4.687 17 0" /></svg>`,
     
-    // Глаз (Наблюдение/Анонимность)
-    eye: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2 12C2 12 6 5 12 5C18 5 22 12 22 12C22 12 18 19 12 19C6 19 2 12 2 12Z" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="12" cy="12" r="3" fill="#bfff00"/>
-    </svg>`,
+    // Глаз (eye)
+    eye: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2" fill="#bfff00" /><path d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7" /></svg>`,
     
-    // Ракета (Скорость/Запуск)
-    rocket: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2C12 2 16 5 16 10C16 13 15 15 15 15H9C9 15 8 13 8 10C8 5 12 2 12 2Z" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M9 15L7 19L10 18" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M15 15L17 19L14 18" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="12" cy="9" r="1.5" fill="#bfff00"/>
-    </svg>`
+    // Ракета (rocket)
+    rocket: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1db954" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" /><path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" /><circle cx="15" cy="9" r="1" fill="#bfff00" /></svg>`
 };
 
 const NAMES = {
@@ -158,7 +127,6 @@ function showSuccess() {
     overlay.classList.add('show');
     targetName.style.color = '#1db954';
 
-    // Через 1.5 секунды скрываем капчу и показываем сайт
     setTimeout(() => {
         document.getElementById('captcha-screen').classList.remove('active');
         document.getElementById('main-content').classList.add('show');
@@ -191,7 +159,6 @@ restartBtn.addEventListener('click', () => {
 /* ============================================================
    ЛОГИКА САЙТА (ШАГИ)
    ============================================================ */
-// НОВАЯ ССЫЛКА НА ПОДПИСКУ
 const SUB_URL = "https://clck.ru/3Wnqdy"; 
 
 let currentApp = '';
@@ -253,5 +220,4 @@ function copyLink() {
     }
 }
 
-// Запуск капчи при загрузке страницы
 initCaptcha();
