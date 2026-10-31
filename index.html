@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Фоновые эффекты -->
     <div class="bg-glow glow-green"></div>
     <div class="bg-glow glow-lime"></div>
 
@@ -44,7 +43,7 @@
             </div>
         </section>
 
-        <!-- ЭКРАН 2: САЙТ (Скрыт до прохождения капчи) -->
+        <!-- ЭКРАН 2: САЙТ -->
         <div id="main-content" class="hidden-content">
             <header class="hero">
                 <div class="logo-wrapper">
@@ -61,53 +60,78 @@
                 <p class="subtitle">Выберите приложение для подключения</p>
             </header>
 
-            <!-- Шаг 1 -->
+            <!-- Шаг 1: Выбор клиента -->
             <section id="step-1" class="step active">
                 <div class="card-grid">
+                    <!-- Happ -->
                     <div class="app-card" onclick="goToStep(2, 'happ')">
                         <div class="app-icon">
                             <img src="happ.png" alt="Happ" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <span class="fallback-text happ-fallback" style="display:none;">H</span>
                         </div>
                         <h3>Happ</h3>
-                        <p>Быстрый и удобный клиент</p>
-                        <button class="btn btn-outline">Выбрать</button>
                     </div>
-
+                    <!-- Incy -->
                     <div class="app-card" onclick="goToStep(2, 'incy')">
                         <div class="app-icon">
                             <img src="incy.png" alt="Incy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <span class="fallback-text incy-fallback" style="display:none;">I</span>
                         </div>
                         <h3>Incy</h3>
-                        <p>Стабильное соединение</p>
-                        <button class="btn btn-outline">Выбрать</button>
+                    </div>
+                    <!-- V2rayNG -->
+                    <div class="app-card" onclick="goToStep(2, 'v2rayng')">
+                        <div class="app-icon">
+                            <img src="v2rayng.png" alt="V2rayNG" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <span class="fallback-text v2rayng-fallback" style="display:none;">V</span>
+                        </div>
+                        <h3>V2rayNG</h3>
+                    </div>
+                    <!-- NekoBox -->
+                    <div class="app-card" onclick="goToStep(2, 'nekobox')">
+                        <div class="app-icon">
+                            <img src="nekobox.png" alt="NekoBox" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <span class="fallback-text nekobox-fallback" style="display:none;">N</span>
+                        </div>
+                        <h3>NekoBox</h3>
+                    </div>
+                    <!-- V2rayTun -->
+                    <div class="app-card" onclick="goToStep(3, 'v2raytun')">
+                        <div class="app-icon">
+                            <img src="v2raytun.png" alt="V2rayTun" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <span class="fallback-text v2raytun-fallback" style="display:none;">T</span>
+                        </div>
+                        <h3>V2rayTun</h3>
+                    </div>
+                    <!-- Hiddify -->
+                    <div class="app-card" onclick="goToStep(3, 'hiddify')">
+                        <div class="app-icon">
+                            <img src="hiddify.png" alt="Hiddify" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <span class="fallback-text hiddify-fallback" style="display:none;">H</span>
+                        </div>
+                        <h3>Hiddify</h3>
                     </div>
                 </div>
             </section>
 
-            <!-- Шаг 2 -->
+            <!-- Шаг 2: Скачивание -->
             <section id="step-2" class="step">
                 <button class="back-btn" onclick="goToStep(1)">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M19 12H5M12 19l-7-7 7-7"/>
-                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                     <span>Назад</span>
                 </button>
                 <div class="content-box">
                     <h2 id="step-2-title">Скачайте приложение</h2>
                     <p class="desc">Для начала работы вам потребуется установить клиент.</p>
-                    <a href="#" id="download-link" target="_blank" rel="noopener" class="btn btn-primary">Скачать в Google Play</a>
+                    <a href="#" id="download-link" target="_blank" rel="noopener" class="btn btn-primary">Скачать</a>
                     <button onclick="goToStep(3)" class="btn btn-secondary mt-20">Далее</button>
                 </div>
             </section>
 
-            <!-- Шаг 3 -->
+            <!-- Шаг 3: Импорт -->
             <section id="step-3" class="step">
                 <button class="back-btn" onclick="goToStep(2, currentApp)">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M19 12H5M12 19l-7-7 7-7"/>
-                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                     <span>Назад</span>
                 </button>
                 <div class="content-box">
@@ -132,9 +156,7 @@
                 </a>
             </footer>
         </div>
-
     </main>
-
     <script src="script.js"></script>
 </body>
 </html>
