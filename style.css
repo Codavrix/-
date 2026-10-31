@@ -93,10 +93,10 @@ body {
 .card:hover { background: rgba(29, 185, 84, 0.08); border-color: rgba(29, 185, 84, 0.4); transform: translateY(-2px); }
 .card:active { transform: scale(0.96); }
 
-/* Обновленный размер иконок (60%) */
+/* Иконки занимают 85% карточки */
 .card svg { 
-    width: 60%; 
-    height: 60%; 
+    width: 85%; 
+    height: 85%; 
     display: block; 
     pointer-events: none; 
     transition: transform 0.15s; 
