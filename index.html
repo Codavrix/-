@@ -60,10 +60,9 @@
                 <p class="subtitle">Выберите приложение для подключения</p>
             </header>
 
-            <!-- Шаг 1: Выбор клиента -->
+            <!-- Шаг 1: Выбор клиента (Все ведут на Шаг 2) -->
             <section id="step-1" class="step active">
                 <div class="card-grid">
-                    <!-- Happ -->
                     <div class="app-card" onclick="goToStep(2, 'happ')">
                         <div class="app-icon">
                             <img src="happ.png" alt="Happ" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
@@ -71,7 +70,6 @@
                         </div>
                         <h3>Happ</h3>
                     </div>
-                    <!-- Incy -->
                     <div class="app-card" onclick="goToStep(2, 'incy')">
                         <div class="app-icon">
                             <img src="incy.png" alt="Incy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
@@ -79,7 +77,6 @@
                         </div>
                         <h3>Incy</h3>
                     </div>
-                    <!-- V2rayNG -->
                     <div class="app-card" onclick="goToStep(2, 'v2rayng')">
                         <div class="app-icon">
                             <img src="v2rayng.png" alt="V2rayNG" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
@@ -87,7 +84,6 @@
                         </div>
                         <h3>V2rayNG</h3>
                     </div>
-                    <!-- NekoBox -->
                     <div class="app-card" onclick="goToStep(2, 'nekobox')">
                         <div class="app-icon">
                             <img src="nekobox.png" alt="NekoBox" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
@@ -95,16 +91,14 @@
                         </div>
                         <h3>NekoBox</h3>
                     </div>
-                    <!-- V2rayTun -->
-                    <div class="app-card" onclick="goToStep(3, 'v2raytun')">
+                    <div class="app-card" onclick="goToStep(2, 'v2raytun')">
                         <div class="app-icon">
                             <img src="v2raytun.png" alt="V2rayTun" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <span class="fallback-text v2raytun-fallback" style="display:none;">T</span>
                         </div>
                         <h3>V2rayTun</h3>
                     </div>
-                    <!-- Hiddify -->
-                    <div class="app-card" onclick="goToStep(3, 'hiddify')">
+                    <div class="app-card" onclick="goToStep(2, 'hiddify')">
                         <div class="app-icon">
                             <img src="hiddify.png" alt="Hiddify" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <span class="fallback-text hiddify-fallback" style="display:none;">H</span>
