@@ -64,6 +64,7 @@
             <section id="step-1" class="step active">
                 <div class="card-grid">
                     <div class="app-card" onclick="goToStep(2, 'happ')">
+                        <span class="badge">Рекомендуем</span>
                         <div class="app-icon">
                             <img src="happ.png" alt="Happ" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <span class="fallback-text happ-fallback" style="display:none;">H</span>
@@ -78,6 +79,7 @@
                         <h3>Incy</h3>
                     </div>
                     <div class="app-card" onclick="goToStep(2, 'v2rayng')">
+                        <span class="badge">Рекомендуем</span>
                         <div class="app-icon">
                             <img src="v2rayng.png" alt="V2rayNG" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <span class="fallback-text v2rayng-fallback" style="display:none;">V</span>
@@ -101,7 +103,7 @@
                 </div>
             </section>
 
-            <!-- Шаг 2: Скачивание (Прошлая версия) -->
+            <!-- Шаг 2: Скачивание -->
             <section id="step-2" class="step">
                 <button class="back-btn" onclick="goToStep(1)">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
@@ -113,10 +115,10 @@
                     
                     <a href="#" id="download-link" target="_blank" rel="noopener" class="btn btn-primary">Скачать</a>
                     
-                    <!-- Подсказка строго под кнопкой -->
-                    <p id="step-2-note" style="display: none; color: var(--text-muted); font-size: 13px; margin-top: 12px; margin-bottom: 16px;"></p>
+                    <!-- Подсказка с уменьшенным отступом -->
+                    <p id="step-2-note" style="display: none; color: var(--text-muted); font-size: 13px; margin-top: 10px; margin-bottom: 0;"></p>
                     
-                    <button onclick="goToStep(3)" class="btn btn-secondary mt-20">Далее</button>
+                    <button onclick="goToStep(3)" class="btn btn-secondary mt-20" style="margin-top: 20px;">Далее</button>
                 </div>
             </section>
 
