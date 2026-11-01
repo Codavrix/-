@@ -160,6 +160,7 @@ const apps = {
     },
     v2rayng: {
         name: 'V2rayNG',
+        // Ссылка ведет на страницу релизов GitHub (ты можешь заменить на свой репозиторий, если нужно)
         download: 'https://github.com/2dust/v2rayNG/releases', 
         import: `v2rayng://install-config?url=${SUB_URL}`,
         note: 'Рекомендуется версия universal'
@@ -192,7 +193,7 @@ function goToStep(step, app = null) {
         const downloadLink = document.getElementById('download-link');
         downloadLink.href = data.download;
         
-        // Настройка подсказки про universal
+        // Настройка подсказки
         const noteEl = document.getElementById('step-2-note');
         if (data.note) {
             noteEl.textContent = data.note;
