@@ -162,7 +162,7 @@ const apps = {
         name: 'V2rayNG',
         download: 'https://github.com/2dust/v2rayNG/releases/latest', 
         import: `v2rayng://install-config?url=${SUB_URL}`,
-        note: 'Советую v2rayNG_universal.apk'
+        note: 'Советуем v2rayNG_universal.apk' // <--- ТУТ ИСПРАВЛЕНО
     },
     v2raytun: {
         name: 'V2rayTun',
