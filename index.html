@@ -60,7 +60,7 @@
                 <p class="subtitle">Выберите приложение для подключения</p>
             </header>
 
-            <!-- Шаг 1: Выбор клиента -->
+            <!-- Шаг 1: Выбор клиента (onclick оставлен, addEventListener убран в JS) -->
             <section id="step-1" class="step active">
                 <div class="card-grid">
                     <div class="app-card" onclick="goToStep(2, 'happ')">
@@ -113,7 +113,7 @@
                     
                     <a href="#" id="download-link" target="_blank" rel="noopener" class="btn btn-primary">Скачать</a>
                     
-                    <!-- Подсказка строго под кнопкой -->
+                    <!-- Подсказка под кнопкой -->
                     <p id="step-2-note" style="display: none; color: var(--text-muted); font-size: 13px; margin-top: 12px; margin-bottom: 16px;"></p>
                     
                     <button onclick="goToStep(3)" class="btn btn-secondary mt-20">Далее</button>
