@@ -162,7 +162,7 @@ const apps = {
         name: 'V2rayNG',
         download: 'https://github.com/2dust/v2rayNG/releases/latest', 
         import: `v2rayng://install-config?url=${SUB_URL}`,
-        note: 'Советуем v2rayNG_universal.apk'
+        note: 'Советую v2rayNG_universal.apk'
     },
     v2raytun: {
         name: 'V2rayTun',
@@ -191,7 +191,7 @@ function goToStep(step, app = null) {
         
         const downloadBtn = document.getElementById('download-link');
         
-        // Принудительно убираем атрибут download
+        // Убираем возможные атрибуты скачивания
         downloadBtn.removeAttribute('download');
         downloadBtn.href = data.download;
         
@@ -215,13 +215,7 @@ function goToStep(step, app = null) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-document.querySelectorAll('.app-card').forEach(card => {
-    card.addEventListener('click', () => {
-        const appName = card.querySelector('h3').textContent.toLowerCase();
-        goToStep(2, appName);
-    });
-});
-
+// Функция копирования ссылки
 function copyLink() {
     const input = document.getElementById('sub-url');
     input.select();
@@ -244,4 +238,5 @@ function copyLink() {
     }
 }
 
+// Запуск капчи
 initCaptcha();
