@@ -189,9 +189,18 @@ function goToStep(step, app = null) {
         const data = apps[currentApp];
         document.getElementById('step-2-title').textContent = `Скачайте ${data.name}`;
         
-        // Настраиваем подсказку
+        const downloadBtn = document.getElementById('download-link');
+        
+        downloadBtn.removeAttribute('download');
+        downloadBtn.href = data.download;
+        
         const noteEl = document.getElementById('step-2-note');
-        noteEl.textContent = data.note;
+        if (data.note) {
+            noteEl.textContent = data.note;
+            noteEl.style.display = 'block';
+        } else {
+            noteEl.style.display = 'none';
+        }
     }
 
     if (step === 3 && currentApp) {
@@ -202,14 +211,6 @@ function goToStep(step, app = null) {
     }
     
     window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-// Функция для открытия ссылки на скачивание в новой вкладке
-function openDownload() {
-    const data = apps[currentApp];
-    if (data && data.download) {
-        window.open(data.download, '_blank');
-    }
 }
 
 function copyLink() {
