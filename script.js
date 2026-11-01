@@ -160,9 +160,9 @@ const apps = {
     },
     v2rayng: {
         name: 'V2rayNG',
-        download: 'https://github.com/2dust/v2rayNG/releases', 
+        download: 'https://github.com/2dust/v2rayNG/releases/latest', 
         import: `v2rayng://install-config?url=${SUB_URL}`,
-        note: 'Рекомендуется версия universal'
+        note: 'Советуем v2rayNG_universal.apk'
     },
     v2raytun: {
         name: 'V2rayTun',
@@ -191,11 +191,11 @@ function goToStep(step, app = null) {
         
         const downloadBtn = document.getElementById('download-link');
         
-        // ПРИНУДИТЕЛЬНО убираем скачивание, чтобы браузер открывал страницу
+        // Принудительно убираем атрибут download
         downloadBtn.removeAttribute('download');
         downloadBtn.href = data.download;
         
-        // Настройка подсказки
+        // Показываем подсказку снизу
         const noteEl = document.getElementById('step-2-note');
         if (data.note) {
             noteEl.textContent = data.note;
