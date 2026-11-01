@@ -101,7 +101,7 @@
                 </div>
             </section>
 
-            <!-- Шаг 2: Скачивание -->
+            <!-- Шаг 2: Скачивание (Прошлая версия) -->
             <section id="step-2" class="step">
                 <button class="back-btn" onclick="goToStep(1)">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
@@ -111,11 +111,10 @@
                     <h2 id="step-2-title">Скачайте приложение</h2>
                     <p class="desc">Для начала работы вам потребуется установить клиент.</p>
                     
-                    <!-- КНОПКА (не ссылка, чтобы браузер не качал файл) -->
-                    <button id="download-btn" onclick="openDownload()" class="btn btn-primary">Скачать</button>
+                    <a href="#" id="download-link" target="_blank" rel="noopener" class="btn btn-primary">Скачать</a>
                     
-                    <!-- ПОДСКАЗКА (всегда видна) -->
-                    <p id="step-2-note" style="color: var(--text-muted); font-size: 14px; margin-top: 16px; margin-bottom: 16px;"></p>
+                    <!-- Подсказка строго под кнопкой -->
+                    <p id="step-2-note" style="display: none; color: var(--text-muted); font-size: 13px; margin-top: 12px; margin-bottom: 16px;"></p>
                     
                     <button onclick="goToStep(3)" class="btn btn-secondary mt-20">Далее</button>
                 </div>
